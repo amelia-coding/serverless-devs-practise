@@ -1,0 +1,38 @@
+{
+  "domainName": "egg-fn1.egg-service.1119604202545786.cn-hangzhou.fc.devsapp.net",
+  "accountId": "1119604202545786",
+  "protocol": "HTTP",
+  "certConfig": {
+    "certName": null,
+    "privateKey": null,
+    "certificate": null
+  },
+  "tlsConfig": {
+    "minVersion": null,
+    "maxVersion": null,
+    "cipherSuites": null
+  },
+  "apiVersion": "2016-08-15",
+  "routeConfig": {
+    "routes": [
+      {
+        "path": "/*",
+        "accountId": null,
+        "apiVersion": "",
+        "serviceName": "egg-service",
+        "functionName": "egg-fn1",
+        "qualifier": null,
+        "methods": null,
+        "rewriteConfig": null,
+        "innerRewriteConfig": null
+      }
+    ]
+  },
+  "createdTime": "2023-11-07T11:28:07Z",
+  "lastModifiedTime": "2023-11-07T11:28:07Z",
+  "keepFullPath": null,
+  "subdomainCount": null,
+  "wafConfig": {
+    "enableWAF": false
+  }
+}

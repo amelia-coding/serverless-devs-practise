@@ -1,0 +1,25 @@
+{
+  "statefulConfig": {
+    "triggerName": "httpTrigger",
+    "description": "",
+    "triggerId": "0d658561-90f5-4553-a438-e522c89fb933",
+    "sourceArn": null,
+    "triggerType": "http",
+    "invocationRole": null,
+    "qualifier": "LATEST",
+    "urlInternet": "https://egg-fn-egg-service-upjfaqldeq.cn-hangzhou.fcapp.run",
+    "urlIntranet": "https://egg-fn-egg-service-upjfaqldeq.cn-hangzhou-vpc.fcapp.run",
+    "triggerConfig": {
+      "methods": [
+        "GET"
+      ],
+      "authType": "anonymous",
+      "disableURLInternet": false
+    },
+    "createdTime": "2023-11-07T11:28:05Z",
+    "lastModifiedTime": "2023-11-07T11:28:05Z",
+    "status": null,
+    "targetArn": null,
+    "name": "httpTrigger"
+  }
+}

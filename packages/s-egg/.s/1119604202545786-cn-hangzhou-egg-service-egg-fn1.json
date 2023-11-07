@@ -1,0 +1,51 @@
+{
+  "statefulConfig": {
+    "functionId": "c08ddd26-5d8a-4a29-9788-14338ef3a7ff",
+    "functionName": "egg-fn1",
+    "description": "Serverless Devs Web Framework Function",
+    "runtime": "custom",
+    "handler": "index.handler",
+    "timeout": 60,
+    "initializer": "",
+    "initializationTimeout": 3,
+    "codeSize": 7657925,
+    "codeChecksum": "1241182340244024792",
+    "memorySize": 512,
+    "gpuMemorySize": null,
+    "environmentVariables": {
+      "PATH": "/opt/nodejs16/bin:/usr/local/bin/apache-maven/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/ruby/bin"
+    },
+    "createdTime": "2023-11-07T11:28:05Z",
+    "lastModifiedTime": "2023-11-07T11:28:05Z",
+    "instanceConcurrency": 1,
+    "instanceSoftConcurrency": null,
+    "customContainerConfig": null,
+    "caPort": 9000,
+    "instanceType": "e1",
+    "layers": [
+      "d3fc5de8d120687be2bfab761518d5de#Nodejs16#1"
+    ],
+    "layersArnV2": [
+      "acs:fc:cn-hangzhou:official:layers/Nodejs16/versions/1"
+    ],
+    "instanceLifecycleConfig": {
+      "preFreeze": {
+        "handler": "",
+        "timeout": 3
+      },
+      "preStop": {
+        "handler": "",
+        "timeout": 3
+      }
+    },
+    "customDNS": null,
+    "customRuntimeConfig": {
+      "command": [
+        "./bootstrap"
+      ],
+      "args": null
+    },
+    "customHealthCheckConfig": null,
+    "name": "egg-fn1"
+  }
+}

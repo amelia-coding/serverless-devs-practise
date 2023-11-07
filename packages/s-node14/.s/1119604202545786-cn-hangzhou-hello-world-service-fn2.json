@@ -1,0 +1,40 @@
+{
+  "statefulConfig": {
+    "functionId": "5caf34b5-7a3c-4ee8-8c2e-34fff25e7cff",
+    "functionName": "fn2",
+    "description": "hello world by serverless devs",
+    "runtime": "nodejs14",
+    "handler": "index.fn2",
+    "timeout": 60,
+    "initializer": "",
+    "initializationTimeout": 3,
+    "codeSize": 363,
+    "codeChecksum": "14799041484965944555",
+    "memorySize": 128,
+    "gpuMemorySize": null,
+    "environmentVariables": {},
+    "createdTime": "2023-11-07T11:23:46Z",
+    "lastModifiedTime": "2023-11-07T11:23:46Z",
+    "instanceConcurrency": 1,
+    "instanceSoftConcurrency": null,
+    "customContainerConfig": null,
+    "caPort": null,
+    "instanceType": "e1",
+    "layers": null,
+    "layersArnV2": null,
+    "instanceLifecycleConfig": {
+      "preFreeze": {
+        "handler": "",
+        "timeout": 3
+      },
+      "preStop": {
+        "handler": "",
+        "timeout": 3
+      }
+    },
+    "customDNS": null,
+    "customRuntimeConfig": null,
+    "customHealthCheckConfig": null,
+    "name": "fn2"
+  }
+}

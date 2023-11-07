@@ -1,0 +1,41 @@
+{
+  "statefulConfig": {
+    "serviceName": "hello-world-service",
+    "description": "hello world by serverless devs",
+    "role": "",
+    "logConfig": {
+      "project": "",
+      "logstore": "",
+      "enableRequestMetrics": false,
+      "enableInstanceMetrics": false,
+      "logBeginRule": "None"
+    },
+    "serviceId": "f6656bce-2823-496a-8d76-1e26c4769d73",
+    "createdTime": "2023-11-07T06:01:48Z",
+    "lastModifiedTime": "2023-11-07T11:23:46Z",
+    "vpcConfig": {
+      "vpcId": "",
+      "vSwitchIds": [],
+      "securityGroupId": "",
+      "role": null,
+      "anytunnelViaENI": null
+    },
+    "internetAccess": true,
+    "nasConfig": {
+      "userId": -1,
+      "groupId": -1,
+      "mountPoints": []
+    },
+    "ossMountConfig": {
+      "mountPoints": []
+    },
+    "vendorConfig": null,
+    "tracingConfig": {
+      "type": null,
+      "params": null,
+      "jaegerConfig": null
+    },
+    "useSLRAuthentication": false,
+    "name": "hello-world-service"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "statefulConfig": {
+    "serviceName": "egg-service",
+    "description": "Serverless Devs Web Framework Service",
+    "role": "",
+    "logConfig": {
+      "project": "",
+      "logstore": "",
+      "enableRequestMetrics": false,
+      "enableInstanceMetrics": false,
+      "logBeginRule": "None"
+    },
+    "serviceId": "a666b4c7-d3ec-4ebd-abde-7d4b41867c0d",
+    "createdTime": "2023-11-07T11:27:58Z",
+    "lastModifiedTime": "2023-11-07T11:28:05Z",
+    "vpcConfig": {
+      "vpcId": "",
+      "vSwitchIds": [],
+      "securityGroupId": "",
+      "role": null,
+      "anytunnelViaENI": null
+    },
+    "internetAccess": true,
+    "nasConfig": {
+      "userId": -1,
+      "groupId": -1,
+      "mountPoints": []
+    },
+    "ossMountConfig": {
+      "mountPoints": []
+    },
+    "vendorConfig": null,
+    "tracingConfig": {
+      "type": null,
+      "params": null,
+      "jaegerConfig": null
+    },
+    "useSLRAuthentication": false,
+    "name": "egg-service"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "functionNames": [
+    "hello-world-service/fn1",
+    "hello-world-service/fn2"
+  ]
+}
