@@ -1,4 +1,7 @@
-'use strict';
+var getRawBody = require('raw-body')
+var getFormBody = require('body/form')
+var body = require('body')
+
 /*
 To enable the initializer feature (https://help.aliyun.com/document_detail/156876.html)
 please implement the initializer function as below：
@@ -7,12 +10,43 @@ exports.initializer = (context, callback) => {
   callback(null, '');
 };
 */
-exports.fn1 = (event, context, callback) => {
-    console.log('hello world fn1');
-    callback(null, 'hello world fn1');
+
+exports.fn1 = (req, resp, context) => {
+  console.log('hello world')
+
+  var params = {
+    path: req.path,
+    queries: req.queries,
+    headers: req.headers,
+    method: req.method,
+    requestURI: req.url,
+    clientIP: req.clientIP,
+  }
+
+  getRawBody(req, function (err, body) {
+    for (var key in req.queries) {
+      var value = req.queries[key]
+      resp.setHeader(key, value)
+    }
+    resp.setHeader('Content-Type', 'text/plain')
+    params.body = body.toString()
+    resp.send(JSON.stringify(params, null, '    '))
+  })
+
+  /*
+    getFormBody(req, function(err, formBody) {
+        for (var key in req.queries) {
+          var value = req.queries[key];
+          resp.setHeader(key, value);
+        }
+        params.body = formBody;
+        console.log(formBody);
+        resp.send(JSON.stringify(params));
+    }); 
+    */
 }
 
-exports.fn2 = (event, context, callback) => {
-  console.log('hello world fn2');
-  callback(null, 'hello world fn2');
+module.exports.fn2 = function (request, response, context) {
+  response.setHeader('Content-Type', 'application/json')
+  response.send(JSON.stringify({ name: '1' }))
 }
