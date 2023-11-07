@@ -1,5 +1,5 @@
 {
-  "domainName": "egg-fn1.egg-service.1119604202545786.cn-hangzhou.fc.devsapp.net",
+  "domainName": "egg-fn2-post.egg-service.1119604202545786.cn-hangzhou.fc.devsapp.net",
   "accountId": "1119604202545786",
   "protocol": "HTTP",
   "certConfig": {
@@ -16,11 +16,11 @@
   "routeConfig": {
     "routes": [
       {
-        "path": "/*",
+        "path": "/post",
         "accountId": null,
         "apiVersion": "",
         "serviceName": "egg-service",
-        "functionName": "egg-fn1",
+        "functionName": "egg-fn2-post",
         "qualifier": null,
         "methods": null,
         "rewriteConfig": null,
@@ -28,8 +28,8 @@
       }
     ]
   },
-  "createdTime": "2023-11-07T11:28:07Z",
-  "lastModifiedTime": "2023-11-07T12:48:43Z",
+  "createdTime": "2023-11-07T12:46:52Z",
+  "lastModifiedTime": "2023-11-07T12:48:56Z",
   "keepFullPath": null,
   "subdomainCount": null,
   "wafConfig": {

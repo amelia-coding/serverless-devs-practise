@@ -83,23 +83,23 @@ services:
         memorySize: 128
         timeout: 60
 
-  compose:
-    component: fc-domain
-    props:
-      region: ${vars.region}
-      customDomain:
-        domainName: 'fc.ajuan.vip'
-        protocol: HTTP # HTTP | HTTP,HTTPS
-        # certConfig:
-        #   certName: exampleCert
-        #   certificate: ./full_chain.pem
-        #   privateKey: ./private.pem
-        routeConfigs:
-          - path: '/*' # 自定义域名路径
-            serviceName: ${vars.service.name} # 服务名称
-            functionName: fn1 # 函数名称
-            methods: ${vars.methods} # HTTP访问方法
-          - path: '/api/*'
-            serviceName: ${vars.service.name}
-            functionName: fn2
-            methods: ${vars.methods}
+  # compose:
+  #   component: fc-domain
+  #   props:
+  #     region: ${vars.region}
+  #     customDomain:
+  #       domainName: 'fc.ajuan.vip'
+  #       protocol: HTTP # HTTP | HTTP,HTTPS
+  #       # certConfig:
+  #       #   certName: exampleCert
+  #       #   certificate: ./full_chain.pem
+  #       #   privateKey: ./private.pem
+  #       routeConfigs:
+  #         - path: '/*' # 自定义域名路径
+  #           serviceName: ${vars.service.name} # 服务名称
+  #           functionName: fn1 # 函数名称
+  #           methods: ${vars.methods} # HTTP访问方法
+  #         - path: '/api/*'
+  #           serviceName: ${vars.service.name}
+  #           functionName: fn2
+  #           methods: ${vars.methods}

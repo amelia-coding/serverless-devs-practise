@@ -1,9 +1,11 @@
 {
   "serviceName": "egg-service",
   "functionNames": [
-    "egg-service/egg-fn1"
+    "egg-service/egg-fn1",
+    "egg-service/egg-fn2-post"
   ],
   "domains": [
-    "egg-fn1.egg-service.1119604202545786.cn-hangzhou.fc.devsapp.net"
+    "egg-fn1.egg-service.1119604202545786.cn-hangzhou.fc.devsapp.net",
+    "egg-fn2-post.egg-service.1119604202545786.cn-hangzhou.fc.devsapp.net"
   ]
 }

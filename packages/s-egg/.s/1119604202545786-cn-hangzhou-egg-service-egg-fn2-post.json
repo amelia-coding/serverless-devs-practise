@@ -1,22 +1,22 @@
 {
   "statefulConfig": {
-    "functionId": "c08ddd26-5d8a-4a29-9788-14338ef3a7ff",
-    "functionName": "egg-fn1",
-    "description": "Serverless Devs Web Framework Function",
+    "functionId": "689869c9-0e8a-49f2-b918-af2d3318b081",
+    "functionName": "egg-fn2-post",
+    "description": "hello world by serverless devs",
     "runtime": "custom",
     "handler": "index.handler",
     "timeout": 60,
     "initializer": "",
     "initializationTimeout": 3,
     "codeSize": 7658003,
-    "codeChecksum": "13353192896858461227",
+    "codeChecksum": "11340556459069546993",
     "memorySize": 512,
     "gpuMemorySize": null,
     "environmentVariables": {
       "PATH": "/opt/nodejs16/bin:/usr/local/bin/apache-maven/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/ruby/bin"
     },
-    "createdTime": "2023-11-07T11:28:05Z",
-    "lastModifiedTime": "2023-11-07T12:48:40Z",
+    "createdTime": "2023-11-07T12:46:50Z",
+    "lastModifiedTime": "2023-11-07T12:48:54Z",
     "instanceConcurrency": 1,
     "instanceSoftConcurrency": null,
     "customContainerConfig": null,
@@ -46,6 +46,6 @@
       "args": null
     },
     "customHealthCheckConfig": null,
-    "name": "egg-fn1"
+    "name": "egg-fn2-post"
   }
 }
