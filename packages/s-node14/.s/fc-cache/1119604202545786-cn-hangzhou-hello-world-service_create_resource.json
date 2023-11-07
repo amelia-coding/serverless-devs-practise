@@ -1,6 +1,5 @@
 {
   "functionNames": [
-    "hello-world-service/fn1",
-    "hello-world-service/fn2"
+    "hello-world-service/start-fc-event-nodejs14"
   ]
 }

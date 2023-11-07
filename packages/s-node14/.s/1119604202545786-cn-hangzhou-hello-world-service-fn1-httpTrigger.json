@@ -1,0 +1,25 @@
+{
+  "statefulConfig": {
+    "triggerName": "httpTrigger",
+    "description": "",
+    "triggerId": "ec581dd2-5712-4709-abd6-513a2c9d160a",
+    "sourceArn": null,
+    "triggerType": "http",
+    "invocationRole": null,
+    "qualifier": "LATEST",
+    "urlInternet": "https://fn-hello-w-service-mwthksqeef.cn-hangzhou.fcapp.run",
+    "urlIntranet": "https://fn-hello-w-service-mwthksqeef.cn-hangzhou-vpc.fcapp.run",
+    "triggerConfig": {
+      "methods": [
+        "GET"
+      ],
+      "authType": "anonymous",
+      "disableURLInternet": false
+    },
+    "createdTime": "2023-11-07T13:06:34Z",
+    "lastModifiedTime": "2023-11-07T13:28:30Z",
+    "status": null,
+    "targetArn": null,
+    "name": "httpTrigger"
+  }
+}

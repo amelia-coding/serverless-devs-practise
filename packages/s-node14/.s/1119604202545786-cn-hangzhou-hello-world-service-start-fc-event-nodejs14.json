@@ -1,20 +1,23 @@
 {
   "statefulConfig": {
-    "functionId": "4510cd1e-8235-4920-834d-2eab16c35274",
-    "functionName": "next-function-example",
+    "functionId": "06d28dd6-1bfe-4b8d-8804-61b3be6d1bea",
+    "functionName": "start-fc-event-nodejs14",
     "description": "hello world by serverless devs",
     "runtime": "nodejs14",
-    "handler": "index.fn2",
+    "handler": "index.fn1",
     "timeout": 60,
     "initializer": "",
     "initializationTimeout": 3,
-    "codeSize": 363,
-    "codeChecksum": "14799041484965944555",
+    "codeSize": 380,
+    "codeChecksum": "10860195156169117568",
     "memorySize": 128,
     "gpuMemorySize": null,
-    "environmentVariables": {},
-    "createdTime": "2023-11-07T06:11:12Z",
-    "lastModifiedTime": "2023-11-07T11:21:04Z",
+    "environmentVariables": {
+      "AccessKeyID": "xxxx",
+      "AccessKeySecret": "xxxxxxx"
+    },
+    "createdTime": "2023-11-07T13:30:46Z",
+    "lastModifiedTime": "2023-11-07T13:30:46Z",
     "instanceConcurrency": 1,
     "instanceSoftConcurrency": null,
     "customContainerConfig": null,
@@ -35,6 +38,6 @@
     "customDNS": null,
     "customRuntimeConfig": null,
     "customHealthCheckConfig": null,
-    "name": "next-function-example"
+    "name": "start-fc-event-nodejs14"
   }
 }

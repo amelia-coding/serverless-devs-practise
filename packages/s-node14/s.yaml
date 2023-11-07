@@ -57,9 +57,12 @@ services:
         description: 'hello world by serverless devs'
         runtime: nodejs14
         codeUri: ./code
-        handler: index.handler
+        handler: index.fn1
         memorySize: 128
         timeout: 60
+        environmentVariables:
+          AccessKeyID: ${env.AccessKeyID}
+          AccessKeySecret: ${env.AccessKeySecret}
   next-function: # 第二个函数的案例，仅供参考
     # 如果在当前项目下执行 s deploy，会同时部署模块：
     #   helloworld：服务hello-world-service，函数cpp-event-function
@@ -94,9 +97,9 @@ services:
         routeConfigs:
           - path: '/*' # 自定义域名路径
             serviceName: ${vars.service.name} # 服务名称
-            functionName: start-fc-event-nodejs14 # 函数名称
+            functionName: fn1 # 函数名称
             methods: ${vars.methods} # HTTP访问方法
           - path: '/api/*'
             serviceName: ${vars.service.name}
-            functionName: next-function
+            functionName: fn2
             methods: ${vars.methods}
