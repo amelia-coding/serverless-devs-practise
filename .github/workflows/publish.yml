@@ -1,0 +1,19 @@
+name: serverless devs project CI/CD
+
+on
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    run-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      with:
+        node-version: 12
+        resistry-url: https://registry.npmjs.org/
+      - run: npm install
+      - run: npm install -g @serverless-devs/s
+      - run: s config add --AccessKeyID ${{secrets.AccessKeyID}} --AccessKeySecret ${{secrets.AccessKeySecret}} -a default -f
+      - run: s deploy -y --use-local
