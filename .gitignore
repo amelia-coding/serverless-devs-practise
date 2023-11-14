@@ -17,3 +17,4 @@ run
 *.zip
 .serverless
 f.yml
+.s

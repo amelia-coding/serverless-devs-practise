@@ -19,13 +19,13 @@ name: web-framework-app
 # access 是当前应用所需要的密钥信息配置：
 # 密钥配置可以参考：https://www.serverless-devs.com/serverless-devs/command/config
 # 密钥使用顺序可以参考：https://www.serverless-devs.com/serverless-devs/tool#密钥使用顺序与规范
-access: "default"
+access: 'default'
 
 vars: # 全局变量
-  region: "cn-hangzhou"
-  functionName: "egg-fn1"
+  region: 'cn-hangzhou'
+  functionName: 'egg-fn1'
   service:
-    name: "egg-service"
+    name: 'egg-service'
     description: 'Serverless Devs Web Framework Service'
 
 services:
@@ -47,6 +47,7 @@ services:
     props: # 组件的属性值
       region: ${vars.region} # 关于变量的使用方法，可以参考：https://www.serverless-devs.com/serverless-devs/yaml#变量赋值
       service: ${vars.service}
+      fcDir: /mnt/auto # 函数计算目录
       function:
         name: ${vars.functionName}
         description: 'Serverless Devs Web Framework Function'
@@ -76,14 +77,14 @@ services:
             - path: '/*'
 
   next-function: # 第二个函数的案例，仅供参考
-   # 如果在当前项目下执行 s deploy，会同时部署模块：
-   #   helloworld：服务hello-world-service，函数cpp-event-function
-   #   next-function：服务hello-world-service，函数next-function-example
-   # 如果想单独部署当前服务与函数，可以执行 s + 模块名/业务名 + deploy，例如：s next-function deploy
-   # 如果想单独部署当前函数，可以执行 s + 模块名/业务名 + deploy function，例如：s next-function deploy function
-   # 更多命令可参考：https://www.serverless-devs.com/fc/readme#文档相关
-   component: fc
-   props:
+    # 如果在当前项目下执行 s deploy，会同时部署模块：
+    #   helloworld：服务hello-world-service，函数cpp-event-function
+    #   next-function：服务hello-world-service，函数next-function-example
+    # 如果想单独部署当前服务与函数，可以执行 s + 模块名/业务名 + deploy，例如：s next-function deploy
+    # 如果想单独部署当前函数，可以执行 s + 模块名/业务名 + deploy function，例如：s next-function deploy function
+    # 更多命令可参考：https://www.serverless-devs.com/fc/readme#文档相关
+    component: fc
+    props:
       region: ${vars.region}
       service: ${vars.service} # 应用整体的服务配置
       function: # 定义一个新的函数
@@ -113,3 +114,32 @@ services:
           protocol: HTTP
           routeConfigs:
             - path: '/api'
+
+  fc-event-test:
+    component: fc  # 组件名称
+    props: #  组件的属性值
+      region: cn-shenzhen
+      service:
+        name: ${vars.service}
+        description: demo for fc component
+        role: acs:ram::1119604202545786:role/aliyunfcdefaultrole
+        vpcConfig:
+          vpcId: vpc-bp191og37vqghbjwpc8vh
+          securityGroupId: sg-bp1hvbwkx1wlr7xwwsos
+          vswitchIds:
+            - vsw-bp17wio255w7iqyxlvoy0
+        internetAccess: true
+        nasConfig:
+          userId: 10003
+          groupId: 10003
+          mountPoints:
+            - serverAddr: 006cf48cc9-yqo63.cn-hangzhou.nas.aliyuncs.com
+              nasDir: /
+              fcDir: /home/app
+      function:
+        name: event-nas-fn
+        description: this is a test
+        runtime: nodejs10
+        codeUri: ./event-code
+        handler: index.handler
+        memorySize: 128

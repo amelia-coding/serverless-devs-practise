@@ -8,15 +8,18 @@
     "timeout": 60,
     "initializer": "",
     "initializationTimeout": 3,
-    "codeSize": 7658003,
-    "codeChecksum": "13353192896858461227",
+    "codeSize": 7671617,
+    "codeChecksum": "3253467053371113669",
     "memorySize": 512,
     "gpuMemorySize": null,
     "environmentVariables": {
-      "PATH": "/opt/nodejs16/bin:/usr/local/bin/apache-maven/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/ruby/bin"
+      "LD_LIBRARY_PATH": "/code/.s/root/usr/local/lib:/code/.s/root/usr/lib:/code/.s/root/usr/lib/x86_64-linux-gnu:/code/.s/root/usr/lib64:/code/.s/root/lib:/code/.s/root/lib/x86_64-linux-gnu:/python/lib/python3.7/site-packages:/code:/code/lib:/usr/local/lib",
+      "NODE_PATH": "/opt/node_modules:/code/node_modules:/usr/local/lib/node_modules",
+      "PATH": "/opt/nodejs16/bin:/usr/local/bin/apache-maven/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/ruby/bin:/code/.s/root/usr/local/bin:/code/.s/root/usr/local/sbin:/code/.s/root/usr/bin:/code/.s/root/usr/sbin:/code/.s/root/sbin:/code/.s/root/bin:/code:/code/node_modules/.bin:/code/.s/node_modules/.bin:/code/.s/python/bin",
+      "PYTHONUSERBASE": "/code/.s/python"
     },
     "createdTime": "2023-11-07T11:28:05Z",
-    "lastModifiedTime": "2023-11-07T12:48:40Z",
+    "lastModifiedTime": "2023-11-13T08:05:14Z",
     "instanceConcurrency": 1,
     "instanceSoftConcurrency": null,
     "customContainerConfig": null,
